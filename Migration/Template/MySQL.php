@@ -36,6 +36,7 @@ class Migration_Template_MySQL extends \app\Migration
 					     ON DELETE ".$constraint[1]." 
 					     ON UPDATE ".$constraint[2]." 
 				";
+			
 			if ($idx < $count)
 			{
 				$query .= ', ';
@@ -80,9 +81,9 @@ class Migration_Template_MySQL extends \app\Migration
 				(
 					"
 						CREATE TABLE IF NOT EXISTS `".$table."` 
-						(
-							".$fields."
-						) 
+							(
+								".$fields."
+							) 
 						ENGINE=:engine  
 						DEFAULT CHARSET=:default_charset
 					",
