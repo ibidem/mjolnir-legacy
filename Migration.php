@@ -9,7 +9,6 @@
  * @license    https://github.com/ibidem/ibidem/blob/master/LICENSE.md
  */
 abstract class Migration extends \app\Instantiatable
-	implements \ibidem\types\Migration
 {
 	/**
 	 * Sets up constraints and other post-migration tasks.
