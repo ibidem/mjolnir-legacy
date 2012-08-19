@@ -15,7 +15,7 @@ class Layer extends \ibidem\base\Layer
 	 * @deprecated
 	 * @param \ibidem\types\Event
 	 */
-	public function capture($event)
+	function capture($event)
 	{
 		if ($this->layer)
 		{
@@ -29,7 +29,7 @@ class Layer extends \ibidem\base\Layer
 	 * @deprecated
 	 * @param \ibidem\types\Event
 	 */
-	public function dispatch($event)
+	function dispatch($event)
 	{
 		if ($this->parent)
 		{
@@ -43,7 +43,7 @@ class Layer extends \ibidem\base\Layer
 	 * @deprecated
 	 * @param \ibidem\types\Event
 	 */
-	public static function broadcast($event)
+	static function broadcast($event)
 	{
 		static::$top->capture($event);
 	}

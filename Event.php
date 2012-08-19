@@ -30,7 +30,7 @@ class Event extends \app\Instantiatable
 	 * @param string
 	 * @return \ibidem\base\Event $this
 	 */
-	public function signature($signature)
+	function signature($signature)
 	{
 		$this->signature = $signature;
 		return $this;
@@ -39,7 +39,7 @@ class Event extends \app\Instantiatable
 	/**
 	 * @return string Event's signature
 	 */
-	public function get_signature()
+	function get_signature()
 	{
 		return $this->signature;
 	}
@@ -48,7 +48,7 @@ class Event extends \app\Instantiatable
 	 * @param mixed contents
 	 * @return \ibidem\base\Event $this
 	 */
-	public function contents($contents)
+	function contents($contents)
 	{
 		$this->contents = $contents;
 		return $this;
@@ -57,7 +57,7 @@ class Event extends \app\Instantiatable
 	/**
 	 * @param mixed event contents
 	 */
-	public function get_contents()
+	function get_contents()
 	{
 		return $this->contents;
 	}
@@ -117,7 +117,7 @@ class Event extends \app\Instantiatable
 	 * @param string subject of the Event
 	 * @return \ibidem\base\Event $this
 	 */
-	public function subject($subject)
+	function subject($subject)
 	{
 		$this->subject = $subject;
 		return $this;
@@ -126,7 +126,7 @@ class Event extends \app\Instantiatable
 	/**
 	 * @return string event subject
 	 */
-	public function get_subject()
+	function get_subject()
 	{
 		return $this->subject;
 	}

@@ -28,7 +28,7 @@ class Task_Migrate extends \app\Task
 	/**
 	 * Execute task.
 	 */
-	public function execute()
+	function execute()
 	{	
 		if ($this->config['list'])
 		{

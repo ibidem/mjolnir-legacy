@@ -14,7 +14,7 @@ class Cache_File extends \app\Instantiatable
 	 * @param mixed default
 	 * @return mixed
 	 */
-	public function fetch($tag, $key, $default = null)
+	function fetch($tag, $key, $default = null)
 	{
 		$key = $tag.'/'.$key;
 		$key = self::standardize($key);
@@ -73,7 +73,7 @@ class Cache_File extends \app\Instantiatable
 	 * @param string key
 	 * @return \ibidem\cache\Cache_File $this
 	 */
-	public function delete($tag, $key = null)
+	function delete($tag, $key = null)
 	{
 		if ($key !== null)
 		{
@@ -118,7 +118,7 @@ class Cache_File extends \app\Instantiatable
 	 * @param integer lifetime (seconds)
 	 * @return \ibidem\cache\Cache_File $this
 	 */
-	public function store($tag, $key, $data, $lifetime_seconds = null)
+	function store($tag, $key, $data, $lifetime_seconds = null)
 	{
 		$key = $tag.'/'.$key;
 		$key = self::standardize($key); ;

@@ -30,7 +30,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	/**
 	 * @return \ibidem\access\Model_HTTP_User
 	 */
-	public static function instance($id = null)
+	static function instance($id = null)
 	{
 		$instance = parent::instance();
 
@@ -81,7 +81,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	 * 
 	 * @return mixed parameter or default 
 	 */
-	public function get($key, $default = null)
+	function get($key, $default = null)
 	{
 		return isset($this->current[$key]) ? $this->current[$key] : $default;
 	}
@@ -95,7 +95,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	 * @param mixed value
 	 * @return \ibidem\access\Model_HTTP_User $this
 	 */
-	public function set($key, $value)
+	function set($key, $value)
 	{
 		$this->current[$key] = $value;
 		return $this;
@@ -107,7 +107,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	 * @param array associative array of key values
 	 * @return \ibidem\access\Model_HTTP_User $this
 	 */
-	public function populate_params(array $params)
+	function populate_params(array $params)
 	{
 		foreach ($params as $key => $value)
 		{
@@ -120,7 +120,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	/**
 	 * @return array
 	 */
-	public function to_array()
+	function to_array()
 	{
 		return $this->current;
 	}

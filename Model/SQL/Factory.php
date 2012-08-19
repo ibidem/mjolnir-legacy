@@ -17,7 +17,7 @@ abstract class Model_SQL_Factory extends \app\Model_Factory
 	/**
 	 * @return string table for the model
 	 */
-	public static function table()
+	static function table()
 	{
 		$database_config = \app\CFS::config('ibidem/database');
 		return $database_config['table_prefix'].static::$table;
@@ -27,7 +27,7 @@ abstract class Model_SQL_Factory extends \app\Model_Factory
 	 * @param string resource id 
 	 * @param array config
 	 */
-	public static function dependencies($id, array $config = null)
+	static function dependencies($id, array $config = null)
 	{
 		if ($config && isset($config['dependencies']))
 		{

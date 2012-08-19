@@ -13,7 +13,7 @@ abstract class Migration extends \app\Instantiatable
 	/**
 	 * Sets up constraints and other post-migration tasks.
 	 */
-	public function bind() 
+	function bind() 
 	{
 		// empty
 	}
@@ -31,7 +31,7 @@ abstract class Migration extends \app\Instantiatable
 	 * 
 	 * @return array callback to bind
 	 */
-	public function up() 
+	function up() 
 	{
 		return $this->bind_callback();
 	}
@@ -39,7 +39,7 @@ abstract class Migration extends \app\Instantiatable
 	/**
 	 * Assemble defaults 
 	 */
-	public function build()
+	function build()
 	{
 		// do nothing
 	}
@@ -47,7 +47,7 @@ abstract class Migration extends \app\Instantiatable
 	/**
 	 * Undo migration.
 	 */
-	public function down()
+	function down()
 	{
 		// empty
 	}

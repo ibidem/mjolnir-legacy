@@ -12,7 +12,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 	/**
 	 * Perform post migration binding operations between tables. 
 	 */
-	public function bind()
+	function bind()
 	{
 		$this->constraints
 			(
@@ -36,7 +36,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 	/**
 	 * @return array
 	 */
-	public function up()
+	function up()
 	{
 		$this->createtable
 			(
@@ -148,7 +148,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 	/**
 	 * Tear down all tables
 	 */
-	public function down()
+	function down()
 	{
 		$this->droptables
 			(

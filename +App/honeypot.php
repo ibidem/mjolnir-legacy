@@ -9,7 +9,7 @@ class Cache_APC extends \ibidem\legacy\Cache_APC { /** @return \ibidem\legacy\Ca
 class Cache_File extends \ibidem\legacy\Cache_File { /** @return \ibidem\legacy\Cache_File */ static function instance() { return parent::instance(); } }
 class Cache_Memcached extends \ibidem\legacy\Cache_Memcached { /** @return \ibidem\legacy\Cache_Memcached */ static function instance() { return parent::instance(); } }
 class Cache extends \ibidem\legacy\Cache { /** @return \ibidem\legacy\Cache */ static function instance() { return parent::instance(); } }
-class Event extends \ibidem\legacy\Event {}
+class Event extends \ibidem\legacy\Event { /** @return \ibidem\legacy\Event */ static function instance() { return parent::instance(); } }
 class Layer_HTML extends \ibidem\legacy\Layer_HTML { /** @return \ibidem\legacy\Layer_HTML */ static function instance() { return parent::instance(); } }
 class Layer_HTTP extends \ibidem\legacy\Layer_HTTP { /** @return \ibidem\legacy\Layer_HTTP */ static function instance() { return parent::instance(); } }
 class Layer_MVC extends \ibidem\legacy\Layer_MVC { /** @return \ibidem\legacy\Layer_MVC */ static function instance() { return parent::instance(); } }
@@ -20,4 +20,5 @@ class Migration extends \ibidem\legacy\Migration { /** @return \ibidem\legacy\Mi
 class Model_Factory extends \ibidem\legacy\Model_Factory {}
 class Model_Instantiatable extends \ibidem\legacy\Model_Instantiatable { /** @return \ibidem\legacy\Model_Instantiatable */ static function instance($id = null) { return parent::instance($id); } }
 class Model_SQL_Factory extends \ibidem\legacy\Model_SQL_Factory {}
+class Relay extends \ibidem\legacy\Relay { /** @return \ibidem\legacy\Relay */ static function instance() { return parent::instance(); } }
 class Task_Migrate extends \ibidem\legacy\Task_Migrate { /** @return \ibidem\legacy\Task_Migrate */ static function instance($encoded_task = null) { return parent::instance($encoded_task); } }

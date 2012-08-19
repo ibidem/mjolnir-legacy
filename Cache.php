@@ -15,7 +15,7 @@ class Cache extends \app\Instantiatable
 	/**
 	 * @return \ibidem\types\Cache 
 	 */
-	public static function instance()
+	static function instance()
 	{
 		$cache_config = \app\CFS::config('ibidem/cache');
 		$default_cache = '\app\Cache_'.$cache_config['default.cache'];
