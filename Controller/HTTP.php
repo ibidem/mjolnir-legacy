@@ -7,8 +7,25 @@
  * @copyright  (c) 2012, Ibidem Team
  * @license    https://github.com/ibidem/ibidem/blob/master/LICENSE.md
  */
-class Controller_HTTP extends \app\Controller_Web
+class Controller_HTTP extends \app\Controller
 {
-	// older less specialized controller
+	/**
+	 * @return string
+	 */
+	function method()
+	{
+		return \app\Server::request_method();
+	}
+	
+	/**
+	 * @param string action
+	 * @return string 
+	 */	
+	function action($action)
+	{
+		$relay = $this->layer->get_relay();
+		return $relay['route']->url(array('action' => $action));
+	}
+
 
 } # class

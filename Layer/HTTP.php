@@ -60,15 +60,16 @@ class Layer_HTTP extends \ibidem\base\Layer_HTTP
 	 */
 	static function redirect($relay, array $params = null, array $query = null)
 	{
-		$access_config = \app\CFS::config('ibidem/relays');
+		$matcher = \app\URL::route($relay);
+		
 		if ($query == null)
 		{
-			static::redirect_to_url($access_config[$relay]['matcher']->url($params));
+			static::redirect_to_url($matcher->url($params));
 		}
 		else # non-null query
 		{
 			$query = \http_build_query($query);
-			static::redirect_to_url($access_config[$relay]['matcher']->url($params).'?'.$query);
+			static::redirect_to_url($matcher->url($params).'?'.$query);
 		}
 	}
 	
