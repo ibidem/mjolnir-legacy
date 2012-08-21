@@ -34,7 +34,7 @@ class Cache_Memcached extends \app\Instantiatable
 			
 			self::$instance = parent::instance();
 			
-			$memcached_config = \app\CFS::config('ibidem\cache');
+			$memcached_config = \app\CFS::config('ibidem/cache');
 			$memcached_config = $memcached_config['Memcached'];
 			
 			if ($memcached_config['persistent_id'])

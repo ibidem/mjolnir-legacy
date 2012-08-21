@@ -18,7 +18,7 @@ class Cache_File extends \app\Instantiatable
 	{
 		$key = $tag.'/'.$key;
 		$key = self::standardize($key);
-		$cache = \app\CFS::config('ibidem\cache');
+		$cache = \app\CFS::config('ibidem/cache');
 		$cache_file = $cache['File']['cache.dir'].$key;
 		
 		if (\file_exists($cache_file))
@@ -79,7 +79,7 @@ class Cache_File extends \app\Instantiatable
 		{
 			$key = $tag.'/'.$key;
 			$key = self::standardize($key);
-			$cache = \app\CFS::config('ibidem\cache');
+			$cache = \app\CFS::config('ibidem/cache');
 			$cache_file = $cache['File']['cache.dir'].$key;
 
 			if (\file_exists($cache_file))
@@ -91,7 +91,7 @@ class Cache_File extends \app\Instantiatable
 		{
 			$key = $tag;
 			$key = self::standardize($key);
-			$cache = \app\CFS::config('ibidem\cache');
+			$cache = \app\CFS::config('ibidem/cache');
 			$cache_file = $cache['File']['cache.dir'].$key;
 
 			if (\file_exists($cache_file))
@@ -122,7 +122,7 @@ class Cache_File extends \app\Instantiatable
 	{
 		$key = $tag.'/'.$key;
 		$key = self::standardize($key); ;
-		$cache = \app\CFS::config('ibidem\cache');
+		$cache = \app\CFS::config('ibidem/cache');
 		
 		if ($lifetime_seconds === null)
 		{
