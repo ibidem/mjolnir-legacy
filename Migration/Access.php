@@ -25,9 +25,9 @@ class Migration_Access extends \app\Migration_Template_MySQL
 		
 		$this->constraints
 			(
-				\app\Model_Profile::assoc_user(),
+				\app\Model_ProfileField::assoc_user(),
 				[
-					'field' => array(\app\Model_Profile::table(), 'CASCADE', 'CASCADE'),
+					'field' => array(\app\Model_ProfileField::table(), 'CASCADE', 'CASCADE'),
 					'user' => array(\app\Model_User::table(), 'CASCADE', 'CASCADE'),
 				]
 			);
@@ -81,7 +81,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 		
 		$this->createtable
 			(
-				\app\Model_Profile::table(), 
+				\app\Model_ProfileField::table(), 
 				'
 					`id`       :key_primary,
 					`idx`      :counter DEFAULT 10,
@@ -95,7 +95,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 		
 		$this->createtable
 			(
-				\app\Model_Profile::assoc_user(), 
+				\app\Model_ProfileField::assoc_user(), 
 				'
 					`user`  :key_foreign NOT NULL,
 					`field` :key_foreign NOT NULL,
@@ -156,8 +156,8 @@ class Migration_Access extends \app\Migration_Template_MySQL
 					\app\Model_User::table(), 
 					\app\Model_Role::table(), 
 					\app\Model_User::assoc_roles(),
-					\app\Model_Profile::table(),
-					\app\Model_Profile::assoc_user(),
+					\app\Model_ProfileField::table(),
+					\app\Model_ProfileField::assoc_user(),
 				]
 			);
 	}
