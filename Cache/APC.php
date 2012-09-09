@@ -1,7 +1,7 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -10,12 +10,12 @@
 class Cache_APC extends \app\Instantiatable
 {
 	/**
-	 * @var \ibidem\cache\Cache_APC
+	 * @var \mjolnir\cache\Cache_APC
 	 */
 	private static $instance;
 	
 	/**
-	 * @return \ibidem\cache\Cache_APC 
+	 * @return \mjolnir\cache\Cache_APC 
 	 */
 	static function instance()
 	{
@@ -49,7 +49,7 @@ class Cache_APC extends \app\Instantiatable
 	
 	/**
 	 * @param string key
-	 * @return \ibidem\cache\Cache_APC $this
+	 * @return \mjolnir\cache\Cache_APC $this
 	 */
 	function delete($tag, $key = null)
 	{
@@ -63,7 +63,7 @@ class Cache_APC extends \app\Instantiatable
 	 * @param string key
 	 * @param mixed data
 	 * @param integer lifetime (seconds)
-	 * @return \ibidem\cache\Cache_APC $this
+	 * @return \mjolnir\cache\Cache_APC $this
 	 */
 	function store($tag, $key, $data, $lifetime_seconds = null)
 	{

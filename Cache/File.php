@@ -1,7 +1,7 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -71,7 +71,7 @@ class Cache_File extends \app\Instantiatable
 
 	/**
 	 * @param string key
-	 * @return \ibidem\cache\Cache_File $this
+	 * @return \mjolnir\cache\Cache_File $this
 	 */
 	function delete($tag, $key = null)
 	{
@@ -116,7 +116,7 @@ class Cache_File extends \app\Instantiatable
 	 * @param string key
 	 * @param mixed data
 	 * @param integer lifetime (seconds)
-	 * @return \ibidem\cache\Cache_File $this
+	 * @return \mjolnir\cache\Cache_File $this
 	 */
 	function store($tag, $key, $data, $lifetime_seconds = null)
 	{

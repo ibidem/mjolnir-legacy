@@ -1,7 +1,7 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Base
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -28,7 +28,7 @@ class Event extends \app\Instantiatable
 	 * Event signature. Typically you should just pass __CLASS__
 	 * 
 	 * @param string
-	 * @return \ibidem\base\Event $this
+	 * @return \mjolnir\base\Event $this
 	 */
 	function signature($signature)
 	{
@@ -46,7 +46,7 @@ class Event extends \app\Instantiatable
 	
 	/**
 	 * @param mixed contents
-	 * @return \ibidem\base\Event $this
+	 * @return \mjolnir\base\Event $this
 	 */
 	function contents($contents)
 	{
@@ -67,7 +67,7 @@ class Event extends \app\Instantiatable
 	 * 
 	 * eg.
 	 * 
-	 *     GET:\ibidem\types\Writer
+	 *     GET:\mjolnir\types\Writer
 	 *     rel=canonical
 	 *     rel=description
 	 *     rel=tags
@@ -115,7 +115,7 @@ class Event extends \app\Instantiatable
 	 * more flexible however; when applicable.
 	 * 
 	 * @param string subject of the Event
-	 * @return \ibidem\base\Event $this
+	 * @return \mjolnir\base\Event $this
 	 */
 	function subject($subject)
 	{

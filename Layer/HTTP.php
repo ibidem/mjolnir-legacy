@@ -1,13 +1,13 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Layer
  * @author     Ibidem
  * @copyright  (c) 2012, Ibidem Team
  * @license    https://github.com/ibidem/ibidem/blob/master/LICENSE.md
  */
-class Layer_HTTP extends \ibidem\base\Layer_HTTP
+class Layer_HTTP extends \mjolnir\base\Layer_HTTP
 {
 	/**
 	 * @deprecated 
@@ -29,17 +29,17 @@ class Layer_HTTP extends \ibidem\base\Layer_HTTP
 	
 	/**
 	 * @deprecated
-	 * @param \ibidem\types\Event
+	 * @param \mjolnir\types\Event
 	 */
 	function dispatch($event)
 	{
 		switch ($event->get_subject())
 		{
-			case \ibidem\types\Event::content_type:
+			case \mjolnir\types\Event::content_type:
 				$this->content_type($event->get_contents());
 				break;
 			
-			case \ibidem\types\Event::expires:
+			case \mjolnir\types\Event::expires:
 				$expiration = $event->get_contents() - \time();
 				$this->set('Pragma', 'public');
 				$this->set('Cache-Control', 'maxage='.$expiration);
@@ -97,7 +97,7 @@ class Layer_HTTP extends \ibidem\base\Layer_HTTP
 		else # REQUEST_METHOD not set
 		{
 			// Default to GET requests
-			return \strtoupper(\ibidem\types\HTTP::GET);
+			return \strtoupper(\mjolnir\types\HTTP::GET);
 		}
 	}
 

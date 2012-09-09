@@ -1,7 +1,7 @@
-<?php namespace ibidem\cache;
+<?php namespace mjolnir\cache;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -10,7 +10,7 @@
 class CacheTester extends \PHPUnit_Framework_TestCase
 {
 	/**
-	 * @var \ibidem\types\Cache
+	 * @var \mjolnir\types\Cache
 	 */
 	protected static $instance;
 	

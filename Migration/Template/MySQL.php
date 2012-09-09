@@ -1,8 +1,8 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /** 
  * @deprecated since version 1.0
- * @package    ibidem
+ * @package    mjolnir
  * @category   Base
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -57,7 +57,7 @@ class Migration_Template_MySQL extends \app\Migration
 	}
 	
 	/**
-	 * @return \ibidem\base\Migration_Template_MySQL
+	 * @return \mjolnir\base\Migration_Template_MySQL
 	 */
 	static function instance()
 	{

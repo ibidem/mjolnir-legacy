@@ -5,20 +5,20 @@
 
 // HowTo: order honeypot -n 'ibidem\legacy'
 
-class Cache_APC extends \ibidem\legacy\Cache_APC { /** @return \ibidem\legacy\Cache_APC */ static function instance() { return parent::instance(); } }
-class Cache_File extends \ibidem\legacy\Cache_File { /** @return \ibidem\legacy\Cache_File */ static function instance() { return parent::instance(); } }
-class Cache_Memcached extends \ibidem\legacy\Cache_Memcached { /** @return \ibidem\legacy\Cache_Memcached */ static function instance() { return parent::instance(); } }
-class Cache extends \ibidem\legacy\Cache { /** @return \ibidem\legacy\Cache */ static function instance() { return parent::instance(); } }
-class Event extends \ibidem\legacy\Event { /** @return \ibidem\legacy\Event */ static function instance() { return parent::instance(); } }
-class Layer_HTML extends \ibidem\legacy\Layer_HTML { /** @return \ibidem\legacy\Layer_HTML */ static function instance() { return parent::instance(); } }
-class Layer_HTTP extends \ibidem\legacy\Layer_HTTP { /** @return \ibidem\legacy\Layer_HTTP */ static function instance() { return parent::instance(); } }
-class Layer_MVC extends \ibidem\legacy\Layer_MVC { /** @return \ibidem\legacy\Layer_MVC */ static function instance() { return parent::instance(); } }
-class Layer extends \ibidem\legacy\Layer { /** @return \ibidem\legacy\Layer */ static function instance() { return parent::instance(); } }
-class Migration_Access extends \ibidem\legacy\Migration_Access { /** @return \ibidem\legacy\Migration_Access */ static function instance() { return parent::instance(); } }
-class Migration_Template_MySQL extends \ibidem\legacy\Migration_Template_MySQL { /** @return \ibidem\legacy\Migration_Template_MySQL */ static function instance() { return parent::instance(); } }
-class Migration extends \ibidem\legacy\Migration { /** @return \ibidem\legacy\Migration */ static function instance() { return parent::instance(); } }
-class Model_Factory extends \ibidem\legacy\Model_Factory {}
-class Model_Instantiatable extends \ibidem\legacy\Model_Instantiatable { /** @return \ibidem\legacy\Model_Instantiatable */ static function instance($id = null) { return parent::instance($id); } }
-class Model_SQL_Factory extends \ibidem\legacy\Model_SQL_Factory {}
-class Relay extends \ibidem\legacy\Relay { /** @return \ibidem\legacy\Relay */ static function instance() { return parent::instance(); } }
-class Task_Migrate extends \ibidem\legacy\Task_Migrate { /** @return \ibidem\legacy\Task_Migrate */ static function instance($encoded_task = null) { return parent::instance($encoded_task); } }
+class Cache_APC extends \mjolnir\legacy\Cache_APC { /** @return \mjolnir\legacy\Cache_APC */ static function instance() { return parent::instance(); } }
+class Cache_File extends \mjolnir\legacy\Cache_File { /** @return \mjolnir\legacy\Cache_File */ static function instance() { return parent::instance(); } }
+class Cache_Memcached extends \mjolnir\legacy\Cache_Memcached { /** @return \mjolnir\legacy\Cache_Memcached */ static function instance() { return parent::instance(); } }
+class Cache extends \mjolnir\legacy\Cache { /** @return \mjolnir\legacy\Cache */ static function instance() { return parent::instance(); } }
+class Event extends \mjolnir\legacy\Event { /** @return \mjolnir\legacy\Event */ static function instance() { return parent::instance(); } }
+class Layer_HTML extends \mjolnir\legacy\Layer_HTML { /** @return \mjolnir\legacy\Layer_HTML */ static function instance() { return parent::instance(); } }
+class Layer_HTTP extends \mjolnir\legacy\Layer_HTTP { /** @return \mjolnir\legacy\Layer_HTTP */ static function instance() { return parent::instance(); } }
+class Layer_MVC extends \mjolnir\legacy\Layer_MVC { /** @return \mjolnir\legacy\Layer_MVC */ static function instance() { return parent::instance(); } }
+class Layer extends \mjolnir\legacy\Layer { /** @return \mjolnir\legacy\Layer */ static function instance() { return parent::instance(); } }
+class Migration_Access extends \mjolnir\legacy\Migration_Access { /** @return \mjolnir\legacy\Migration_Access */ static function instance() { return parent::instance(); } }
+class Migration_Template_MySQL extends \mjolnir\legacy\Migration_Template_MySQL { /** @return \mjolnir\legacy\Migration_Template_MySQL */ static function instance() { return parent::instance(); } }
+class Migration extends \mjolnir\legacy\Migration { /** @return \mjolnir\legacy\Migration */ static function instance() { return parent::instance(); } }
+class Model_Factory extends \mjolnir\legacy\Model_Factory {}
+class Model_Instantiatable extends \mjolnir\legacy\Model_Instantiatable { /** @return \mjolnir\legacy\Model_Instantiatable */ static function instance($id = null) { return parent::instance($id); } }
+class Model_SQL_Factory extends \mjolnir\legacy\Model_SQL_Factory {}
+class Relay extends \mjolnir\legacy\Relay { /** @return \mjolnir\legacy\Relay */ static function instance() { return parent::instance(); } }
+class Task_Migrate extends \mjolnir\legacy\Task_Migrate { /** @return \mjolnir\legacy\Task_Migrate */ static function instance($encoded_task = null) { return parent::instance($encoded_task); } }

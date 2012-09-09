@@ -1,7 +1,7 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /** 
- * @package    ibidem
+ * @package    mjolnir
  * @category   Base
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -38,7 +38,7 @@ abstract class Model_Factory
 	 * errors that would prevent assembly.
 	 * 
 	 * @param array fields
-	 * @return \ibidem\types\Validator
+	 * @return \mjolnir\types\Validator
 	 */
 	static function validator(array $fields)
 	{
@@ -52,7 +52,7 @@ abstract class Model_Factory
 	 * errors that would prevent assembly.
 	 * 
 	 * @param array fields
-	 * @return \ibidem\types\Validator
+	 * @return \mjolnir\types\Validator
 	 */
 	static function update_validator($id, array $fields)
 	{
@@ -107,7 +107,7 @@ abstract class Model_Factory
 	 * Fabricate the model.
 	 * 
 	 * @param array fields required for creation
-	 * @return \ibidem\types\Validator on error, null on success
+	 * @return \mjolnir\types\Validator on error, null on success
 	 */
 	final static function factory(array $fields)
 	{

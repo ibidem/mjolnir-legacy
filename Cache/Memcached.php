@@ -1,7 +1,7 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -10,14 +10,14 @@
 class Cache_Memcached extends \app\Instantiatable
 {
 	/**
-	 * @var \ibidem\cache\Cache_Memecached
+	 * @var \mjolnir\cache\Cache_Memecached
 	 */
 	private static $instance;
 	
 	private $memcached;
 	
 	/**
-	 * @return \ibidem\cache\Cache_Memecached
+	 * @return \mjolnir\cache\Cache_Memecached
 	 */
 	static function instance()
 	{
@@ -85,7 +85,7 @@ class Cache_Memcached extends \app\Instantiatable
 	
 	/**
 	 * @param string key
-	 * @return \ibidem\cache\Cache_Memecached $this
+	 * @return \mjolnir\cache\Cache_Memecached $this
 	 */
 	function delete($tag, $key = null)
 	{
@@ -98,7 +98,7 @@ class Cache_Memcached extends \app\Instantiatable
 	 * @param string key
 	 * @param mixed data
 	 * @param integer lifetime (seconds)
-	 * @return \ibidem\cache\Cache_Memecached $this
+	 * @return \mjolnir\cache\Cache_Memecached $this
 	 */
 	function store($tag, $key, $data, $lifetime_seconds = null)
 	{

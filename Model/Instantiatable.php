@@ -1,14 +1,14 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Model
  * @author     Ibidem
  * @copyright  (c) 2012, Ibidem Team
  * @license    https://github.com/ibidem/ibidem/blob/master/LICENSE.md
  */
 class Model_Instantiatable extends \app\Instantiatable
-	implements \ibidem\types\Params
+	implements \mjolnir\types\Params
 {
 	/**
 	 * Target model.
@@ -28,7 +28,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	private $current;
 	
 	/**
-	 * @return \ibidem\access\Model_HTTP_User
+	 * @return \mjolnir\access\Model_HTTP_User
 	 */
 	static function instance($id = null)
 	{
@@ -44,7 +44,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	
 	/**
 	 * @param array info
-	 * @return \ibidem\base\Model_Instantiatable $this
+	 * @return \mjolnir\base\Model_Instantiatable $this
 	 */
 	protected function set_current(array $info)
 	{
@@ -93,7 +93,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	 * 
 	 * @param string key
 	 * @param mixed value
-	 * @return \ibidem\access\Model_HTTP_User $this
+	 * @return \mjolnir\access\Model_HTTP_User $this
 	 */
 	function set($key, $value)
 	{
@@ -105,7 +105,7 @@ class Model_Instantiatable extends \app\Instantiatable
 	 * The method will overwrite the value. New values may also be created.
 	 * 
 	 * @param array associative array of key values
-	 * @return \ibidem\access\Model_HTTP_User $this
+	 * @return \mjolnir\access\Model_HTTP_User $this
 	 */
 	function populate_params(array $params)
 	{

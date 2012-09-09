@@ -1,10 +1,10 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
  * This is the default cache. It will initialize to whatever is set as the 
  * default caching mechanism.
  * 
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
@@ -13,7 +13,7 @@
 class Cache extends \app\Instantiatable
 {
 	/**
-	 * @return \ibidem\types\Cache 
+	 * @return \mjolnir\types\Cache 
 	 */
 	static function instance()
 	{

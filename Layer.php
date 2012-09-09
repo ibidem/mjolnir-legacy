@@ -1,19 +1,19 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Legacy
  * @author     Ibidem
  * @copyright  (c) 2012, Ibidem Team
  * @license    https://github.com/ibidem/ibidem/blob/master/LICENSE.md
  */
-class Layer extends \ibidem\base\Layer
+class Layer extends \mjolnir\base\Layer
 {
 	/**
 	 * Captures a broadcast Event.
 	 * 
 	 * @deprecated
-	 * @param \ibidem\types\Event
+	 * @param \mjolnir\types\Event
 	 */
 	function capture($event)
 	{
@@ -27,7 +27,7 @@ class Layer extends \ibidem\base\Layer
 	 * Sends an Event to the parent of the current layer.
 	 * 
 	 * @deprecated
-	 * @param \ibidem\types\Event
+	 * @param \mjolnir\types\Event
 	 */
 	function dispatch($event)
 	{
@@ -41,7 +41,7 @@ class Layer extends \ibidem\base\Layer
 	 * Send an Event to the top layer and then down
 	 * 
 	 * @deprecated
-	 * @param \ibidem\types\Event
+	 * @param \mjolnir\types\Event
 	 */
 	static function broadcast($event)
 	{

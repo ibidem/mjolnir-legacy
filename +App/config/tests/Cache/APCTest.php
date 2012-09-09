@@ -1,9 +1,9 @@
-<?php namespace ibidem\cache;
+<?php namespace mjolnir\cache;
 
 require_once 'template.CacheTester'.EXT;
 
 /**
- * @package    ibidem
+ * @package    mjolnir
  * @category   Cache
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team

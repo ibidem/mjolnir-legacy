@@ -1,4 +1,4 @@
-<?php namespace ibidem\legacy;
+<?php namespace mjolnir\legacy;
 
 // Because the ibidem\base doesn't have proper support for database persistence
 // the per version migrations is added in when you enable the database module.
@@ -7,7 +7,7 @@
 
 /**
  * @deprecated since version 1.0
- * @package    ibidem
+ * @package    mjolnir
  * @category   Base
  * @author     Ibidem Team
  * @copyright  (c) 2012 Ibidem Team
