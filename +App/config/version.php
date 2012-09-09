@@ -1,8 +1,8 @@
 <?php return array
 	(
-		'legacy\migrations' => array
+		'mjolnir\legacy' => array
 			(
-				'major' => 1,
+				'major' => 0,
 				'minor' => 0,
 			),
 	);
