@@ -17,7 +17,7 @@ class Cache extends \app\Instantiatable
 	 */
 	static function instance()
 	{
-		$cache_config = \app\CFS::config('ibidem/cache');
+		$cache_config = \app\CFS::config('mjolnir/cache');
 		$default_cache = '\app\Cache_'.$cache_config['default.cache'];
 		
 		return $default_cache::instance();

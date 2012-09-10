@@ -20,7 +20,7 @@ class Task_Migrate extends \app\Task
 	 */
 	protected function list_versions()
 	{
-		$versions = \array_keys(\app\CFS::config('ibidem/migrations'));
+		$versions = \array_keys(\app\CFS::config('mjolnir/migrations'));
 		\sort($versions);
 		$this->writer->write(' Migrations: '.\implode(', ', $versions));
 	}
@@ -36,7 +36,7 @@ class Task_Migrate extends \app\Task
 			return;
 		}
 		
-		$migrations = \app\CFS::config('ibidem/migrations');
+		$migrations = \app\CFS::config('mjolnir/migrations');
 		\ksort($migrations);
 		
 		if ($this->config['uninstall'] || $this->config['refresh'])
@@ -50,7 +50,7 @@ class Task_Migrate extends \app\Task
 			$this->writer->eol();
 		}
 			
-		$migrations = \app\CFS::config('ibidem/migrations');
+		$migrations = \app\CFS::config('mjolnir/migrations');
 		\ksort($migrations);
 		
 		if ($this->config['install'] || $this->config['refresh'])

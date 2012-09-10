@@ -19,7 +19,7 @@ abstract class Model_SQL_Factory extends \app\Model_Factory
 	 */
 	static function table()
 	{
-		$database_config = \app\CFS::config('ibidem/database');
+		$database_config = \app\CFS::config('mjolnir/database');
 		return $database_config['table_prefix'].static::$table;
 	}
 	

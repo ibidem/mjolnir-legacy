@@ -107,7 +107,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 			);
 				
 		// inject roles
-		$access_config = \app\CFS::config('ibidem/access');
+		$access_config = \app\CFS::config('mjolnir/access');
 		$roles = $access_config['roles'];
 		if ( ! empty($roles))
 		{
@@ -135,7 +135,7 @@ class Migration_Access extends \app\Migration_Template_MySQL
 		}
 		
 		// inject openid providers
-		$providers = \app\CFS::config('ibidem/a12n')['signin'];
+		$providers = \app\CFS::config('mjolnir/a12n')['signin'];
 		foreach ($providers as $provider)
 		{
 			\app\Register::inject($provider['register'], 'off');
