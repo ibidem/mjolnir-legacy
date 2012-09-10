@@ -49,7 +49,7 @@ class Migration_Template_MySQL extends \app\Migration
 		
 		\app\SQL::prepare
 			(
-				'ibidem/base:migration_template_constraints',
+				'mjolnir/base:migration_template_constraints',
 				$query,
 				'mysql'
 			)
@@ -76,7 +76,7 @@ class Migration_Template_MySQL extends \app\Migration
 	{
 		\app\SQL::prepare
 			(
-				'ibidem/base:migration_template_createtable',
+				'mjolnir/base:migration_template_createtable',
 				\strtr
 				(
 					"
@@ -102,7 +102,7 @@ class Migration_Template_MySQL extends \app\Migration
 		$state = 0;
 		\app\SQL::prepare
 			(
-				'ibidem/base:migration_template_droptable_fkcheck',
+				'mjolnir/base:migration_template_droptable_fkcheck',
 				"SET foreign_key_checks = :check",
 				'mysql'
 			)
@@ -113,7 +113,7 @@ class Migration_Template_MySQL extends \app\Migration
 		{
 			\app\SQL::prepare
 				(
-					'ibidem/base:migration_template_droptable_drop',
+					'mjolnir/base:migration_template_droptable_drop',
 					"DROP TABLE IF EXISTS `".$table."`",
 					'mysql'
 				)
@@ -123,7 +123,7 @@ class Migration_Template_MySQL extends \app\Migration
 		$state = 1;
 		\app\SQL::prepare
 			(
-				'ibidem/base:migration_template_droptable_fkcheck',
+				'mjolnir/base:migration_template_droptable_fkcheck',
 				"SET foreign_key_checks = :check",
 				'mysql'
 			)
