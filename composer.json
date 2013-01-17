@@ -1,29 +1,29 @@
 {
 	"name": "mjolnir/legacy",
 	"version": "0.0",
-	"description": "Mjolnir legacy codebase",
-	"keywords": ["legacy"],
+	"description": "Mjolnir compatiblity and legacy support.",
+	"keywords": [ ],
 	"homepage": "https://github.com/ibidem",
 	"type": "library",
 	"license": "BSD-2",
-	
+
 	"authors": [
 		{
 			"name": "srcspider",
 			"homepage": "https://github.com/srcspider"
 		}
 	],
-	
+
 	"require": {
 		"php": ">=5.4.0"
 	},
-	
+
 	"autoload": {
 		"psr-0": {
 			"mjolnir\\legacy": "../.."
 		}
 	},
-	
+
 	"extra": {
 		"branch-alias": {
 			"dev-wip/v1.0": "1.0.x-dev"
