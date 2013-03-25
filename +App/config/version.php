@@ -2,7 +2,8 @@
 	(
 		'mjolnir\legacy' => array
 			(
-				'major' => 0,
-				'minor' => 0,
+				'major' => '2',
+				'minor' => '0',
+				'tag' => 'liquid'
 			),
 	);
