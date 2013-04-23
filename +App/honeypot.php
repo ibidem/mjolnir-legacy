@@ -5,3 +5,9 @@
 
 // HowTo: order honeypot -n 'mjolnir\legacy'
 
+
+class Puppet extends \mjolnir\legacy\Puppet
+{
+	/** @return \app\Puppet */
+	static function instance() { return parent::instance(); }
+}
