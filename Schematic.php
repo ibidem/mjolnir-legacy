@@ -302,12 +302,6 @@ class Schematic
 		}
 	}
 
-
-
-
-
-
-
 	static function channels()
 	{
 		$channel_list = static::channel_list();
