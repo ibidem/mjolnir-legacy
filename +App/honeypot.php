@@ -68,6 +68,12 @@ class Task_Db_Reset extends \mjolnir\legacy\Task_Db_Reset
 	static function instance() { return parent::instance(); }
 }
 
+class Task_Db_Sphinx extends \mjolnir\legacy\Task_Db_Sphinx
+{
+	/** @return \app\Task_Db_Sphinx */
+	static function instance() { return parent::instance(); }
+}
+
 /**
  * @method \app\Task_Db_Uninstall set($name, $value)
  * @method \app\Task_Db_Uninstall add($name, $value)
@@ -130,6 +136,12 @@ class Task_Devlog extends \mjolnir\legacy\Task_Devlog
 class Task_Make_Schematic extends \mjolnir\legacy\Task_Make_Schematic
 {
 	/** @return \app\Task_Make_Schematic */
+	static function instance() { return parent::instance(); }
+}
+
+class Task_Sphinx_Model extends \mjolnir\legacy\Task_Sphinx_Model
+{
+	/** @return \app\Task_Sphinx_Model */
 	static function instance() { return parent::instance(); }
 }
 trait Trait_Task_Db_Migrations { use \mjolnir\legacy\Trait_Task_Db_Migrations; }

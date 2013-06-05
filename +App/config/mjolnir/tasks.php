@@ -214,4 +214,20 @@
 							)
 					),
 			),
+		'db:sphinx' => array
+			(
+				'category' => 'Legacy',
+				'description' => array
+					(
+						'Provides helpers for working with sphinx.'
+					),
+				'flags' => array
+					(
+						'regenerate' => array
+							(
+								'description' => 'Regenerate sphinx configuration file.',
+								'short' => 'r',
+							),
+					),
+			),
 	);
