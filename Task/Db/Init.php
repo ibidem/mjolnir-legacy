@@ -15,6 +15,14 @@ class Task_Db_Init extends \app\Task_Base
 	function run()
 	{
 		\app\Task::consolewriter($this->writer);
+		
+		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
+		{
+			$this->writer
+				->printf('error', 'System is currently setup to use ['.\app\CFS::config('mjolnir/base')['db:migrations'].'] migrations.')
+				->eol()->eol();
+			exit;
+		}
 
 		$uninstall = $this->get('uninstall', false);
 		$forced = $this->get('forced', false);

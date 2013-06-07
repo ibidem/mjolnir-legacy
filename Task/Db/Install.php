@@ -18,6 +18,14 @@ class Task_Db_Install extends \app\Task_Base
 	{
 		\app\Task::consolewriter($this->writer);
 
+		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
+		{
+			$this->writer
+				->printf('error', 'System is currently setup to use ['.\app\CFS::config('mjolnir/base')['db:migrations'].'] migrations.')
+				->eol()->eol();
+			exit;
+		}
+		
 		$channel = $this->get('channel');
 		$show_order = $this->get('show-order', false);
 

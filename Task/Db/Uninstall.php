@@ -16,6 +16,14 @@ class Task_Db_Uninstall extends \app\Task_Base
 	{
 		\app\Task::consolewriter($this->writer);
 
+		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
+		{
+			$this->writer
+				->printf('error', 'System is currently setup to use ['.\app\CFS::config('mjolnir/base')['db:migrations'].'] migrations.')
+				->eol()->eol();
+			exit;
+		}
+		
 		$schematics_config = \app\Schematic::config();
 
 		$channel = $this->get('channel', false);

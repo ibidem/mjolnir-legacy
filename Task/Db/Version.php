@@ -14,6 +14,16 @@ class Task_Db_Version extends \app\Task_Base
 	 */
 	function run()
 	{
+		\app\Task::consolewriter($this->writer);
+		
+		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
+		{
+			$this->writer
+				->printf('error', 'System is currently setup to use ['.\app\CFS::config('mjolnir/base')['db:migrations'].'] migrations.')
+				->eol()->eol();
+			exit;
+		}
+		
 		$force_set = $this->get('force-set', false);
 
 		if ($force_set !== false)
