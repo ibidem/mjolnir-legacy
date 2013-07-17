@@ -25,7 +25,7 @@ class Task_Db_Upgrade extends \app\Task_Base
 				->eol()->eol();
 			exit;
 		}
-		
+
 		$channel = $this->get('channel', false);
 
 		if ($channel !== false)

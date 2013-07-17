@@ -15,7 +15,7 @@ class Task_Db_Version extends \app\Task_Base
 	function run()
 	{
 		\app\Task::consolewriter($this->writer);
-		
+
 		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
 		{
 			$this->writer
@@ -23,7 +23,7 @@ class Task_Db_Version extends \app\Task_Base
 				->eol()->eol();
 			exit;
 		}
-		
+
 		$force_set = $this->get('force-set', false);
 
 		if ($force_set !== false)

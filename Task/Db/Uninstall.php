@@ -23,7 +23,7 @@ class Task_Db_Uninstall extends \app\Task_Base
 				->eol()->eol();
 			exit;
 		}
-		
+
 		$schematics_config = \app\Schematic::config();
 
 		$channel = $this->get('channel', false);

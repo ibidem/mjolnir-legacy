@@ -25,7 +25,7 @@ class Task_Db_Reset extends \app\Task_Base
 				->eol()->eol();
 			exit;
 		}
-		
+
 		$channel = $this->get('channel', false);
 		$serial = $this->get('serial', false);
 

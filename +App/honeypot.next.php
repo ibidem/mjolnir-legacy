@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace mjolnir\legacy\next;
 

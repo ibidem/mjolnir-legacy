@@ -25,7 +25,7 @@ class Task_Db_Install extends \app\Task_Base
 				->eol()->eol();
 			exit;
 		}
-		
+
 		$channel = $this->get('channel');
 		$show_order = $this->get('show-order', false);
 

@@ -15,7 +15,7 @@ class Task_Db_Init extends \app\Task_Base
 	function run()
 	{
 		\app\Task::consolewriter($this->writer);
-		
+
 		if (\app\CFS::config('mjolnir/base')['db:migrations'] !== 'schematic')
 		{
 			$this->writer
