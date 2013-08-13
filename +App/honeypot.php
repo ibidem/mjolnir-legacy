@@ -6,6 +6,19 @@
 // HowTo: order honeypot -n 'mjolnir\legacy'
 
 
+/**
+ * @method \app\Layer_HTML set($name, $value)
+ * @method \app\Layer_HTML add($name, $value)
+ * @method \app\Layer_HTML metadata_is(array $metadata = null)
+ * @method \app\Layer_HTML channel_is($channel = null)
+ * @method \app\Channel channel()
+ */
+class Layer_HTML extends \mjolnir\legacy\Layer_HTML
+{
+	/** @return \app\Layer_HTML */
+	static function instance() { return parent::instance(); }
+}
+
 class Puppet extends \mjolnir\legacy\Puppet
 {
 	/** @return \app\Puppet */
@@ -68,6 +81,13 @@ class Task_Db_Reset extends \mjolnir\legacy\Task_Db_Reset
 	static function instance() { return parent::instance(); }
 }
 
+/**
+ * @method \app\Task_Db_Sphinx set($name, $value)
+ * @method \app\Task_Db_Sphinx add($name, $value)
+ * @method \app\Task_Db_Sphinx metadata_is(array $metadata = null)
+ * @method \app\Task_Db_Sphinx writer_is($writer)
+ * @method \app\Writer writer()
+ */
 class Task_Db_Sphinx extends \mjolnir\legacy\Task_Db_Sphinx
 {
 	/** @return \app\Task_Db_Sphinx */
@@ -136,12 +156,6 @@ class Task_Devlog extends \mjolnir\legacy\Task_Devlog
 class Task_Make_Schematic extends \mjolnir\legacy\Task_Make_Schematic
 {
 	/** @return \app\Task_Make_Schematic */
-	static function instance() { return parent::instance(); }
-}
-
-class Task_Sphinx_Model extends \mjolnir\legacy\Task_Sphinx_Model
-{
-	/** @return \app\Task_Sphinx_Model */
 	static function instance() { return parent::instance(); }
 }
 trait Trait_Task_Db_Migrations { use \mjolnir\legacy\Trait_Task_Db_Migrations; }
