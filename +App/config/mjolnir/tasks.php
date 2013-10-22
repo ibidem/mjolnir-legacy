@@ -23,6 +23,16 @@
 							),
 					),
 			),
+		'cleanup' => array
+			(
+				'flags' => array
+					(
+						'cache-only' => array
+							(
+								'description' => 'Stop after clearing cache.'
+							),
+					),
+			),
 		'devlog' => array
 			(
 				'category' => 'Legacy',
