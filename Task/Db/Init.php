@@ -38,9 +38,7 @@ class Task_Db_Init extends \app\Task_Base
 		// check if table exists
 		$current_tables = \app\SQL::prepare
 			(
-				__METHOD__.':show_tables',
-				'SHOW TABLES',
-				'mysql'
+				'SHOW TABLES'
 			)
 			->run()
 			->fetch_all();
@@ -113,12 +111,13 @@ class Task_Db_Init extends \app\Task_Base
 			{
 				\app\SQL::prepare
 					(
-						__METHOD__.':init_channel',
 						'
-							INSERT INTO `'.\app\Schematic::channel_table().'`
+							INSERT INTO `[channels]`
 							(channel, serial) VALUES (:channel, \'0:0-default\')
 						',
-						'mysql'
+						[
+							'[channels]' => \app\Schematic::channel_table()
+						]
 					)
 					->str(':channel', $channel)
 					->run();

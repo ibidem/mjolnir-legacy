@@ -31,12 +31,13 @@ class Schematic
 	{
 		return \app\SQL::prepare
 			(
-				__METHOD__,
 				'
 					SELECT *
-					  FROM `'.static::channel_table().'`
+					  FROM `[channels]`
 				',
-				'mysql'
+				[
+					'[channels]' => static::channel_table()
+				]
 			)
 			->run()
 			->fetch_all();
@@ -81,9 +82,7 @@ class Schematic
 
 		\app\SQL::prepare
 			(
-				__METHOD__.':migration_template_droptable_fkcheck',
-				'SET foreign_key_checks = FALSE',
-				'mysql'
+				'SET foreign_key_checks = FALSE'
 			)
 			->run();
 
@@ -91,18 +90,15 @@ class Schematic
 		{
 			\app\SQL::prepare
 				(
-					__METHOD__,
-					'DROP TABLE IF EXISTS `'.$table.'`',
-					'mysql'
+					'DROP TABLE IF EXISTS `[table]`',
+					[ '[table]' => $table ]
 				)
 				->run();
 		}
 
 		\app\SQL::prepare
 			(
-				__METHOD__.':migration_template_reapply_table_fkcheck',
-				'SET foreign_key_checks = TRUE',
-				'mysql'
+				'SET foreign_key_checks = TRUE'
 			)
 			->run();
 	}
@@ -114,13 +110,14 @@ class Schematic
 	{
 		\app\SQL::prepare
 			(
-				__METHOD__,
 				'
-					UPDATE `'.static::channel_table().'`
+					UPDATE `[channels]`
 					   SET serial = :serial
 					 WHERE channel = :channel
 				',
-				'mysql'
+				[
+					'[channels]' => static::channel_table()
+				]
 			)
 			->str(':serial', $serial)
 			->str(':channel', $channel)
@@ -169,12 +166,14 @@ class Schematic
 
 			$patients = \app\SQL::prepare
 				(
-					__METHOD__.':read_patients',
 					'
 						SELECT *
-						  FROM `'.$table.'`
+						  FROM `[table]`
 						 LIMIT :limit OFFSET :offset
-					'
+					',
+					[
+						'[table]' => $table
+					]
 				)
 				->page($page, $reads)
 				->run()
@@ -196,20 +195,18 @@ class Schematic
 			$schematics_config = \app\CFS::config('mjolnir/schematics');
 			\app\SQL::prepare
 				(
-					__METHOD__,
 					\strtr
-						(
-							'
-								CREATE TABLE IF NOT EXISTS `'.$table.'`
-									(
-										'.$schematic.'
-									)
-								ENGINE=:engine
-								DEFAULT CHARSET=:default_charset
-							',
-							$schematics_config['definitions']
-						),
-					'mysql'
+					(
+						'
+							CREATE TABLE IF NOT EXISTS `'.$table.'`
+								(
+									'.$schematic.'
+								)
+							ENGINE=:engine
+							DEFAULT CHARSET=:default_charset
+						',
+						$schematics_config['definitions']
+					)
 				)
 				->run();
 		}
@@ -237,16 +234,14 @@ class Schematic
 
 		\app\SQL::prepare
 			(
-				__METHOD__,
 				\strtr
-					(
-						'
-							ALTER TABLE `'.$table.'`
-							'.$updates.'
-						',
-						$schematics_config['definitions']
-					),
-				'mysql'
+				(
+					'
+						ALTER TABLE `'.$table.'`
+						'.$updates.'
+					',
+					$schematics_config['definitions']
+				)
 			)
 			->run();
 	}
@@ -286,7 +281,7 @@ class Schematic
 
 			try
 			{
-				\app\SQL::prepare(__METHOD__, $query, 'mysql')->run();
+				\app\SQL::prepare($query)->run();
 			}
 			catch (\Exception $e)
 			{
@@ -495,13 +490,14 @@ class Schematic
 	{
 		\app\SQL::prepare
 			(
-				__METHOD__,
 				'
-					UPDATE `'.static::channel_table().'`
+					UPDATE `[channels]`
 					   SET serial = :serial
 					 WHERE channel = :channel
 				',
-				'mysql'
+				[
+					'[channels]' => static::channel_table()
+				]
 			)
 			->str(':channel', $channel)
 			->str(':serial', $serial)
